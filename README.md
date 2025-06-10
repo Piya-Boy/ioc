@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Project Structure
 
-- `ioc_app2.py`: Main application file
+- `main.py`: Main application file
 - `config.py`: Configuration settings
 - `utils.py`: Utility functions
 - `requirements.txt`: Project dependencies
