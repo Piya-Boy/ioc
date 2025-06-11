@@ -2,17 +2,23 @@
 Configuration settings for IOC Enrichment Tool
 """
 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # API Keys
 API_KEYS = {
-    'virustotal': "0c2ff4706b911810baaa4548c625c6b2d94c640faa5b99226069cbd7be2f329e",
-    'abuseipdb': "9db7f656bdc477ee447dabea6b3238c55c36cdf7b91e801bf80f2893cd2b1c3d21deae8bb711e081",
-    'otx': "ff67d575f75f39192f7b0b810f145a863860ffc9f2141587be8f76cb7d9e5fd4",
+    'virustotal': os.getenv('VIRUSTOTAL_API_KEY'),
+    'abuseipdb': os.getenv('ABUSEIPDB_API_KEY'),
+    'otx': os.getenv('OTX_API_KEY'),
     'xforce': {
-        'key': "1dfaf62e-7f1f-407f-8dd2-15ec36910959",
-        'pass': "c08f4567-4a1a-44b6-bfe5-fcee0626a1f1"
+        'key': os.getenv('XFORCE_API_KEY'),
+        'pass': os.getenv('XFORCE_API_PASS')
     },
-    'shodan': "",  # Add your Shodan API key
-    'hybrid_analysis': ""  # Add your Hybrid Analysis API key
+    'shodan': os.getenv('SHODAN_API_KEY'),
+    'hybrid_analysis': os.getenv('HYBRID_ANALYSIS_API_KEY')
 }
 
 # Scoring Configuration
