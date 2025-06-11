@@ -33,4 +33,8 @@ coverage.xml
 *.cover
 
 # Logs
-*.log 
+*.log
+
+# Environment variables
+.env
+!.env.example 
